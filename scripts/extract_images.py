@@ -44,7 +44,7 @@ def extract_pdf_to_images(pdf_dir, output_dir, article_name):
                 page = doc.load_page(page_num)
                 pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))  # 2x scale for better quality
                 
-                output_filename = f"{article_name}-{global_page_index}.png"
+                output_filename = f"{article_name}_page_{global_page_index}.png"
                 output_file = img_path / output_filename
                 
                 pix.save(output_file)
@@ -71,25 +71,47 @@ if __name__ == "__main__":
 
     article_name = args.name
     if not article_name:
+        # Get potential names from PDFs
+        pdf_path = Path(PDF_INPUT_DIR)
+        found_pdfs = sorted([f.stem for f in pdf_path.glob("*.pdf")])
+        
+        # Get potential names from Posts
         existing_posts = get_existing_posts(POSTS_DIR)
-        if existing_posts:
-            print("\nSelect an existing article name:")
-            for idx, post in enumerate(existing_posts, 1):
-                print(f"{idx}. {post}")
-            print(f"{len(existing_posts) + 1}. [Enter Custom Name]")
+        
+        print("\nSelect an article name prefix:")
+        options = []
+        
+        # 1. Show PDF names as primary suggestions
+        for pdf_name in found_pdfs:
+            options.append(pdf_name)
+            print(f"{len(options)}. [From PDF] {pdf_name}")
             
-            choice = input(f"\nSelect (1-{len(existing_posts) + 1}): ").strip()
+        # 2. Show Post names (optionally stripped of dates)
+        for post in existing_posts:
+            # Full name
+            options.append(post)
+            print(f"{len(options)}. [From Post Full] {post}")
             
-            try:
-                choice_idx = int(choice)
-                if 1 <= choice_idx <= len(existing_posts):
-                    article_name = existing_posts[choice_idx - 1]
-                else:
-                    article_name = input("Enter the custom article name: ").strip()
-            except ValueError:
+            # Date-stripped name (e.g., 2026-01-17-title -> title)
+            # Standard Jekyll post format is YYYY-MM-DD-title
+            import re
+            stripped = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', post)
+            if stripped != post:
+                options.append(stripped)
+                print(f"{len(options)}. [From Post Clean] {stripped}")
+
+        print(f"{len(options) + 1}. [Enter Custom Name]")
+        
+        choice = input(f"\nSelect (1-{len(options) + 1}): ").strip()
+        
+        try:
+            choice_idx = int(choice)
+            if 1 <= choice_idx <= len(options):
+                article_name = options[choice_idx - 1]
+            else:
                 article_name = input("Enter the custom article name: ").strip()
-        else:
-            article_name = input("Enter the article name for image prefix: ").strip()
+        except ValueError:
+            article_name = input("Enter the custom article name: ").strip()
 
     if not article_name:
         article_name = "image" # Default fallback
