@@ -1,0 +1,6 @@
+# PDF source files
+assets/pdf_sources/
+*.pdf
+
+# Image extraction temp
+temp_pdfs/
