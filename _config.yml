@@ -1,3 +1,10 @@
 title: 중년코딩
 description: AI, Automation, Google Sheets, and Thinking
+
+# ✅ 서브도메인 커스텀 도메인에서는 baseurl은 비워야 함
+baseurl: ""            # 또는 아예 이 줄을 삭제해도 됨
+url: "https://blog.2run1.kr"
+
 theme: minima
+plugins:
+  - jekyll-feed
