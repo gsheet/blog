@@ -11,7 +11,7 @@ categories: [Google Sheets, GAS, AI]
 
 이 글은 구글 시트를 엔진으로 삼아 웹 앱(Web App)을 배포하고 확장하는 기술적인 로드맵을 담고 있습니다.
 
-![그림1: 구글 시트 웹앱 배포 및 AI 활용 가이드 표지](/assets/images/2026-01-17-sheet-web-app-1.png)
+![그림1: 구글 시트 웹앱 배포 및 AI 활용 가이드 표지](/assets/images/2026-01-17-google-sheets-web-app-1.png)
 
 ### 1. 웹 앱(Web App): 시트 밖으로 나온 프로그램
 
@@ -19,7 +19,7 @@ categories: [Google Sheets, GAS, AI]
 
 가장 큰 장점은 **서버리스(Serverless)**라는 점입니다. 별도의 서버를 구매하거나 구축할 필요 없이, 모든 코드는 구글 서버에서 돌아갑니다. 고유한 URL이 생성되므로 링크만 있으면 누구나 내가 만든 도구에 접속할 수 있죠. 복잡한 인프라 구축은 구글에게 맡기고 우리는 서비스만 생각합시다.
 
-![그림2: 웹 앱의 개념과 서버리스 특징 설명](/assets/images/2026-01-17-sheet-web-app-2.png)
+![그림2: 웹 앱의 개념과 서버리스 특징 설명](/assets/images/2026-01-17-google-sheets-web-app-2.png)
 
 ### 2. API: 데이터가 오고 가는 파이프라인
 
@@ -30,7 +30,7 @@ categories: [Google Sheets, GAS, AI]
 
 앱스 스크립트의 `ContentService`와 `HtmlService`를 활용하면 텍스트나 JSON 데이터뿐만 아니라 완전한 HTML 페이지까지 반환할 수 있습니다.
 
-![그림3: doGet과 doPost를 이용한 데이터 파이프라인 구조](/assets/images/2026-01-17-sheet-web-app-3.png)
+![그림3: doGet과 doPost를 이용한 데이터 파이프라인 구조](/assets/images/2026-01-17-google-sheets-web-app-3.png)
 
 ### 3. API로 활용 가능한 웹앱의 장점 (Backend Power)
 
@@ -40,7 +40,7 @@ categories: [Google Sheets, GAS, AI]
 * **Headless Mode:** 화면(UI) 없이 순수한 데이터(JSON/Text)만 주고받을 수 있어 다른 웹사이트나 모바일 앱의 백엔드로도 쓸 수 있습니다.
 * **연결성(Connectivity):** 슬랙(Slack)이나 CRM 같은 외부 서비스의 데이터를 시트로 자동 수집하거나, 반대로 시트의 데이터를 외부로 실시간 전송할 수 있습니다.
 
-![그림4: 무료 DB 및 연결성 등 웹앱 백엔드의 장점](/assets/images/2026-01-17-sheet-web-app-4.png)
+![그림4: 무료 DB 및 연결성 등 웹앱 백엔드의 장점](/assets/images/2026-01-17-google-sheets-web-app-4.png)
 
 ### 4. HTML 파일을 활용한 무한한 디자인 자유도
 
@@ -48,7 +48,7 @@ categories: [Google Sheets, GAS, AI]
 
 버튼의 모양, 색상, 배치를 픽셀 단위로 제어하는 것은 물론, 애니메이션이나 팝업 같은 동적인 상호작용이 가능한 '진짜' 웹사이트를 만들 수 있습니다. 나만의 얼굴을 가진 커스텀 UI를 구현해 보세요.
 
-![그림5: HTML 파일을 활용한 커스텀 디자인과 코드 예시](/assets/images/2026-01-17-sheet-web-app-5.png)
+![그림5: HTML 파일을 활용한 커스텀 디자인과 코드 예시](/assets/images/2026-01-17-google-sheets-web-app-5.png)
 
 ### 5. AI와 함께하는 정교화 & 디자인 (The Magic Tool)
 
@@ -56,7 +56,7 @@ categories: [Google Sheets, GAS, AI]
 
 **'프롬프트 투 코드(Prompt to Code)'** 시대로, "파스텔 톤의 둥근 버튼이 있는 로그인 페이지를 만들어줘"라고 AI에게 요청하면 됩니다. AI가 생성한 코드를 앱스 스크립트에 붙여넣기만 하세요. 최신 AI 모델들은 앱스 스크립트의 최신 V8 런타임에 최적화된 코드를 작성해 줍니다.
 
-![그림6: AI를 활용한 코딩 및 디자인 정교화](/assets/images/2026-01-17-sheet-web-app-6.png)
+![그림6: AI를 활용한 코딩 및 디자인 정교화](/assets/images/2026-01-17-google-sheets-web-app-6.png)
 
 AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 
@@ -64,7 +64,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 2. **코드 생성 및 수정:** AI가 짜준 백엔드(.gs)와 프론트엔드(.html) 코드를 프로젝트에 적용합니다.
 3. **디버깅의 혁신:** 오류가 나면 에러 메시지를 그대로 AI에게 던지세요. 'AI 디버거'가 즉시 수정 코드를 제안합니다.
 
-![그림7: AI를 활용한 3단계 개발 워크플로우](/assets/images/2026-01-17-sheet-web-app-7.png)
+![그림7: AI를 활용한 3단계 개발 워크플로우](/assets/images/2026-01-17-google-sheets-web-app-7.png)
 
 ### 6. 왜 구글 설문지(Forms)로는 부족할까요?
 
@@ -74,7 +74,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 * **로직:** 복잡한 데이터 검증 로직을 구현할 수 있습니다.
 * **보안 및 데이터:** 로그인 권한을 관리하고, 데이터를 가공해서 저장하는 것이 가능합니다.
 
-![그림8: 구글 설문지와 웹 앱의 차이점 비교](/assets/images/2026-01-17-sheet-web-app-8.png)
+![그림8: 구글 설문지와 웹 앱의 차이점 비교](/assets/images/2026-01-17-google-sheets-web-app-8.png)
 
 ### 활용 사례 1: 스마트한 승인 및 신청 시스템
 
@@ -84,7 +84,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 2. **데이터 검증:** 입력된 ISBN이 유효한지, 예산 범위 내인지 제출 버튼을 누르기 *전*에 확인합니다.
 3. **히든 데이터:** 사용자는 볼 필요 없지만 관리자에게 필요한 승인 코드나 타임스탬프를 안전하게 함께 전송합니다.
 
-![그림9: 스마트한 승인 및 신청 시스템 활용 사례](/assets/images/2026-01-17-sheet-web-app-9.png)
+![그림9: 스마트한 승인 및 신청 시스템 활용 사례](/assets/images/2026-01-17-google-sheets-web-app-9.png)
 
 ### 활용 사례 2: 이미지와 함께하는 재고 목록
 
@@ -94,7 +94,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 * **동적 재고 확인:** 구글 시트의 재고 수량과 실시간으로 연동하여, 품절된 상품은 아예 선택할 수 없게 만듭니다.
 * **바코드/QR 생성:** 외부 API와 연동해 제품별 코드를 실시간으로 화면에 띄웁니다.
 
-![그림10: 이미지와 동적 기능을 활용한 재고 목록 사례](/assets/images/2026-01-17-sheet-web-app-10.png)
+![그림10: 이미지와 동적 기능을 활용한 재고 목록 사례](/assets/images/2026-01-17-google-sheets-web-app-10.png)
 
 ### 배포 방식의 이해: Bound vs Standalone
 
@@ -103,7 +103,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 * **Container-bound Script (종속형):** 특정 스프레드시트 파일에 묶여 있습니다. 해당 시트의 데이터를 다루기에 가장 빠르고 간편해서 초보자에게 추천합니다.
 * **Standalone Script (독립형):** 구글 드라이브에 별도 파일로 존재합니다. 여러 시트를 동시에 관리하거나 라이브러리로 쓸 때 적합합니다.
 
-![그림11: 종속형 스크립트와 독립형 스크립트의 배포 방식 비교](/assets/images/2026-01-17-sheet-web-app-11.png)
+![그림11: 종속형 스크립트와 독립형 스크립트의 배포 방식 비교](/assets/images/2026-01-17-google-sheets-web-app-11.png)
 
 ### 배포 설정 (Deployment): 문을 여는 방법
 
@@ -121,7 +121,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 
 
 
-![그림12: 실행 권한 및 액세스 권한 설정 화면](/assets/images/2026-01-17-sheet-web-app-12.png)
+![그림12: 실행 권한 및 액세스 권한 설정 화면](/assets/images/2026-01-17-google-sheets-web-app-12.png)
 
 ### 확장 기능: 외부 세상과의 연결 (UrlFetchApp)
 
@@ -131,7 +131,7 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 * **AI 요약:** 시트에 쌓인 고객 피드백을 OpenAI API로 보내 감정 분석을 시키고 결과를 저장합니다.
 * **데이터 수집:** 공공 데이터 포털의 정보를 가져와 내 앱에 표시합니다.
 
-![그림13: UrlFetchApp을 이용한 외부 서비스 연결 및 확장](/assets/images/2026-01-17-sheet-web-app-13.png)
+![그림13: UrlFetchApp을 이용한 외부 서비스 연결 및 확장](/assets/images/2026-01-17-google-sheets-web-app-13.png)
 
 ### 나만의 웹 서비스 구축 로드맵
 
@@ -143,8 +143,8 @@ AI를 활용한 개발 워크플로우는 다음과 같이 단순화됩니다.
 4. **배포:** 권한 설정 후 웹 앱 URL을 생성합니다.
 5. **확장:** 외부 API를 연결해 기능을 고도화합니다.
 
-![그림14: 웹 서비스 구축을 위한 5단계 로드맵](/assets/images/2026-01-17-sheet-web-app-14.png)
+![그림14: 웹 서비스 구축을 위한 5단계 로드맵](/assets/images/2026-01-17-google-sheets-web-app-14.png)
 
 복잡한 코딩 공부보다 중요한 것은 '무엇을 만들까' 하는 상상력입니다. 구글 시트와 AI라는 강력한 도구가 준비되어 있습니다. 지금 바로 `script.google.com`에 접속해서 당신만의 첫 번째 '디지털 점토'를 빚어보세요. 남는 시간에는 더 중요한 일을 합시다.
 
-![그림15: 시작을 독려하는 메시지와 접속 주소](/assets/images/2026-01-17-sheet-web-app-15.png)
+![그림15: 시작을 독려하는 메시지와 접속 주소](/assets/images/2026-01-17-google-sheets-web-app-15.png)
