@@ -1,7 +1,20 @@
 ---
-
-## layout: post title: "함수 암기는 구글에게, 우리는 칼퇴를! Gemini 3.0 & 스프레드시트 완전 자동화 가이드" date: 2026-01-17 categories: [Google Sheets, AI Automation] tags: [gemini-3-0, google-sheets, apps-script, automation, ai-coding, productivity, api, prompt-engineering, regex]
+layout: post
+title: "함수 암기는 구글에게, 우리는 칼퇴를! Gemini 3.0 & 스프레드시트 완전 자동화 가이드"
+date: 2026-01-17
+categories: [Google Sheets, AI Automation]
+tags:
+  - gemini-3-0
+  - google-sheets
+  - apps-script
+  - automation
+  - ai-coding
+  - productivity
+  - api
+  - prompt-engineering
+  - regex
 ---
+
 
 안녕하세요, JNCD입니다.
 
